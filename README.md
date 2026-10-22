@@ -25,10 +25,11 @@
    ```bash
    python3 ai_ops.py -e "docker: permission denied while trying to connect..."
    ```
-   ![Uploading figure1.png…]()
+   <img width="1109" height="1296" alt="figure1" src="https://github.com/user-attachments/assets/09db69fb-3953-421f-b926-7c8270845bf0" />
 
 4. 运行命令翻译模式:
    ```bash
    python3 ai_ops.py -c "查看当前系统内内存占用排名前五的进程"
    ```
-   <img width="1944" height="1384" alt="figure2" src="https://github.com/user-attachments/assets/048b141a-1216-4ee2-a26d-9c3a1ee17252" />
+   <img width="1723" height="1465" alt="figure2" src="https://github.com/user-attachments/assets/6b284d52-9ab4-4c93-8626-4a595be988d0" />
+
