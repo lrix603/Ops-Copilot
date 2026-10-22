@@ -16,6 +16,19 @@
 
 ## 如何使用
 
-1. 配置你的智谱 API Key（免费）：
+1. 在同级目录下创建一个名为`.evn`的文件。
+2. 配置你的智谱 API Key在env文件中：
    ```bash
-   export ZHIPU_API_KEY="你的真实API_KEY"
+   ZHIPU_API_KEY=你的真实API_KEY
+   ```
+3. 运行排障模式：
+   ```bash
+   python3 ai_ops.py -e "docker: permission denied while trying to connect..."
+   ```
+   ![Uploading figure1.png…]()
+
+4. 运行命令翻译模式:
+   ```bash
+   python3 ai_ops.py -c "查看当前系统内内存占用排名前五的进程"
+   ```
+   <img width="1944" height="1384" alt="figure2" src="https://github.com/user-attachments/assets/048b141a-1216-4ee2-a26d-9c3a1ee17252" />
