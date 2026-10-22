@@ -3,6 +3,8 @@ import sys
 import argparse
 import requests
 from dotenv import load_dotenv
+from rich.console import Console
+from rich.markdown import Markdown
 
 # 自动加载当前目录下的.env文件
 load_dotenv()
@@ -49,7 +51,11 @@ def troubleshoot(error_msg):
     要求：回复必须精简、直击要害，不要废话。
     """
     print("\n\033[96m[*] 启动 FDE 排障模式 (GLM-5.3 深度思考中)...\033[0m\n")
-    print(call_ai(prompt))
+    # 用rich渲染Markdown
+    response_text = call_ai(prompt)
+    console = Console()
+    md = Markdown(response_text)
+    console.print(md)
 
 def query_command(intent):
     """自然语言转命令模式 (-c)"""
@@ -63,7 +69,10 @@ def query_command(intent):
     3. 危险提示（如果该命令有删库、格式化或破坏风险，请用 ⚠️ 标出）
     """
     print("\n\033[96m[*] 启动命令生成模式 (GLM-5.3 深度思考中)...\033[0m\n")
-    print(call_ai(prompt))
+    response_text = call_ai(prompt)
+    console = Console()
+    md = Markdown(response_text)
+    console.print(md)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ops-Copilot: AI 驱动的 FDE 终端排障与命令助手")
